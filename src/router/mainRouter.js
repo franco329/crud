@@ -1,10 +1,8 @@
 const { Router } = require("express");
-const {
-  getRouter,
-  putRouter,
-  deleteRouter,
-  postRouter,
-} = require("./subRouters");
+const getRouter = require("./subRouters/getRouter");
+const putRouter = require("./subRouters/putRouter");
+const postRouter = require("./subRouters/postRouter");
+const deleteRouter = require("./subRouters/deleteRouter");
 
 const mainRouter = Router();
 
