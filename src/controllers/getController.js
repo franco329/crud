@@ -16,8 +16,13 @@ const getAllProducts = async () => {
 };
 const getProductByName = async (name) => {
   const infoApi = products;
-  const cleanedProducts = infoCleaner(products);
+  const cleanedProducts = infoCleaner(infoApi);
+  const filteredProducts = cleanedProducts.filter(
+    (product) => product.name.toLowerCase() === name.toLowerCase()
+  );
+  return filteredProducts;
 };
 module.exports = {
   getAllProducts,
+  getProductByName,
 };
