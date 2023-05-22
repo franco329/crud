@@ -22,7 +22,13 @@ const getProductByName = async (name) => {
   );
   return filteredProducts;
 };
+
+const getById = async (id) => {
+  return products.filter((product) => product.id === Number(id));
+};
+
 module.exports = {
   getAllProducts,
   getProductByName,
+  getById,
 };
